@@ -1,0 +1,20 @@
+{
+  "name": "notconf",
+  "description": "A Flatiron HTTP application",
+  "version": "0.0.1",
+  "private": false,
+  "dependencies": {
+    "union": "0.1.7",
+    "flatiron": "0.1.12-1",
+    "connect": "1.8.5",
+    "director": "1.0.9-1"
+  },
+  "devDependencies": {
+    "api-easy": "0.3.2",
+    "vows": "0.6.1"
+  },
+  "scripts": {
+    "test": "vows --spec",
+    "start": "node app.js"
+  }
+}
