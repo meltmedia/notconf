@@ -1,0 +1,78 @@
+.embed #container {
+  margin: 0 !important;
+  width: 95% !important;
+}
+
+.wufoo .info, .wufoo .paging-context { border: none; }
+
+.wufoo .info h2 { display: none; }
+
+.wufoo label.desc, #fo13li211 legend, #fo14li6 legend {
+  color: #31404f;
+  font-family: "futura-pt", Verdana, sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+form span.req {
+  color: #0d95aa !important;
+}
+
+.wufoo li.focused {
+  background-color: #fff;
+}
+
+.wufoo input.text, .wufoo textarea.textarea, .wufoo input.file, .wufoo select.select {
+  border: 1px solid #ccc;
+  border-top: none;
+  color: #7f7f7f;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-bottom: 10px;
+  padding: 7px;
+}
+
+#errorLi {
+  border-radius: 4px;
+}
+
+#errorMsgLbl {
+  font-family: "futura-pt", Verdana, sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+p#errorMsg {
+  color: #7f7f7f !important;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+p.error {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* general reg */
+
+#fo15li1 span label { display: none; }
+#fo15li1 #Field1 { margin-right: 5px; }
+
+/* speakers reg */
+
+#fo13li7 span label { display: none; }
+#fo13li7 #Field7 { margin-right: 5px; }
+#fo13li10 span label { display: none; }
+#fo13li212 div label { margin-top: -10px; }
+
+/* volunteers reg */
+
+#fo14li1 span label { display: none; }
+#fo14li1 #Field1 { margin-right: 5px; }
+#fo14li4 span label { display: none; }
+#fo14li6 legend { padding-bottom: 10px; }
+
+/* sponsor reg */
+
+#fo16li5 br, #fo16li1 br { display: none; }
+#fo16li1 span label { display: none; }
+#fo16li1 #Field1 { margin-right: 5px; }
+#fo16li4 span label { display: none; }

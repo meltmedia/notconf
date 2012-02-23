@@ -1,0 +1,273 @@
+/*********************************/
+/* --- Max Screen 980px wide --- */
+/* ----------------------------- */
+
+@media only screen 
+and (max-width: 980px) {
+
+nav {
+  padding: 0;
+}
+
+} /* end 980px wide */
+
+/*********************************/
+/* --- Max Screen 900px wide --- */
+/* ----------------------------- */
+
+@media only screen 
+and (max-width: 900px) {
+
+
+#header-content {
+  background-position: 60px 97%;
+}
+
+#blurb {
+  background: rgba(255,255,255,.5);
+  border: 1px solid rgba(255,255,255,.6);
+  border-radius: 3px;
+  margin: 0;
+  padding:15px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 215px;
+}
+
+#blurb .btn {
+  margin-bottom: 5px;
+}
+
+#blurb p {
+  font-size: 20px;
+  line-height: 25px;
+}
+
+#blurb p #script {
+  font-size: 40px;
+  position: absolute;
+  top: 30px;
+}
+
+#logo {
+  background-size: 180px auto;
+  height: 105px;
+  width: 180px;
+}
+
+} /* end 900px wide */
+
+
+/* --- Max Screen 700px wide --- */
+/* ----------------------------- */
+
+@media only screen 
+and (max-width: 700px) {
+
+#header-content {
+  background-position: 400px 97%;
+  background-size: auto 200px;
+  min-height: 150px;
+  padding-top: 10px;
+}
+
+#blurb {
+  background: none;
+  border: none;
+  padding:0;
+  left: 270px;
+}
+
+#blurb .btn {
+  margin-top: 20px;
+}
+
+#logo {
+  background-size: 150px auto;
+  height: 88px;
+  margin-left: 20px;
+  width: 150px;
+}
+
+nav ul {
+  padding-left: 20px;
+}
+
+nav ul li a {
+  font-size: 14px;
+  padding: 10px 15px;
+}
+
+nav ul li.twitter {
+  right: 20px;
+  top: 8px;
+}
+
+#content section {
+  float: none;
+}
+
+#about, #details, #schedule, #register {
+  border-right: none;
+  padding: 0 5%;
+  width: 90%;
+}
+
+#sponsors {
+  border-top: 1px solid #ccc;
+  margin-top: 40px;
+  padding: 20px 5%;
+  width: 90%;
+}
+
+#sponsors li {
+  float: left;
+  margin-right: 4%;
+  width: 22%;
+}
+
+#sponsors li:last-child {
+  margin-right: 0;
+}
+
+#sponsors img { max-height: 75px; }
+
+#sponsors #unicon img {
+  margin-top: 30px;
+  max-height: 17px;
+}
+
+} /* end 700px wide */
+
+/* --- Max Screen 660px wide --- */
+/* ----------------------------- */
+
+@media only screen 
+and (max-width: 660px) {
+
+#events tr td { padding: 15px 15px 15px 0; }
+#events tr td.time { padding-left: 10px; }
+
+} /* end 660px wide */
+
+/* --- Max Screen 500px wide --- */
+/* ----------------------------- */
+
+@media only screen 
+and (max-width: 500px) {
+
+#header-content {
+  background: none;
+}
+
+#blurb {
+  left: auto;
+  right: 15px;
+}
+
+#about h1 {
+  background-size: 450px auto;
+  font-size: 20px;
+  height: 263px;
+  max-width: 450px;
+}
+
+#about h1 span {
+  background-color: rgba(4,17,16,.8);
+  bottom: 20px;
+  display: inline-block;
+  left: 20px;
+  padding: 10px;
+  position: absolute;
+  width: 65%;
+}
+
+#events tr {
+  font-size: 17px;
+}
+
+#events tr td.activities {
+  padding: 15px 20px;
+}
+
+} /* end 500px wide */
+
+/* --- Max Screen 450px wide --- */
+/* ----------------------------- */
+
+@media only screen 
+and (max-width: 450px) {
+
+nav ul li.twitter {
+  background: url(../images/icon-twitter2.png) no-repeat 0 40%;
+  top: 50px;
+}
+
+nav ul li.twitter a {
+  color: #31404f;
+  text-shadow: none;
+}
+
+#content {
+  padding-top: 55px;
+}
+
+} /* end 450px wide */
+
+/* --- Max Screen 430px wide --- */
+/* ----------------------------- */
+
+@media only screen 
+and (max-width: 430px) {
+
+#header-content { min-height: 120px; }
+
+#blurb { top: 0; }
+
+#blurb p { display: none; }
+
+#blurb .btn { margin-right: 0; }
+
+#sponsors li {
+  float: none;
+  margin-right: 0;
+  width: 100%;
+}
+
+#sponsors img { max-height: 100%; }
+
+#sponsors #unicon img {
+  margin-top: 0;
+  max-height: 100%;
+}
+
+} /* end 430px wide */
+
+/* --- Max Screen 320px wide --- */
+/* ----------------------------- */
+
+@media only screen 
+and (max-width: 320px) {
+
+#logo {
+  background-size: 110px auto;
+  height: 80px;
+  width: 110px;
+}
+
+#about h1 {
+  background-size: 370px auto;
+  font-size: 20px;
+  height: 200px;
+}
+
+#about h1 span {
+  bottom: 10px;
+  left: 10px;
+  padding: 10px;
+  position: absolute;
+  width: 80%;
+}
+
+} /* end 430px wide */

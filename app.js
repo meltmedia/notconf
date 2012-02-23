@@ -20,7 +20,14 @@ app.use(flatiron.plugins.http, {
 
   after: [
     // Add post-response middleware here
-  ]
+  ],
+
+  onError: function(err) {
+    if(err) {
+      this.res.writeHead(404);
+      this.res.end("404");
+    }
+  }
 
 });
 
