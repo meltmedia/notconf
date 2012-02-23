@@ -1,6 +1,7 @@
 var flatiron = require('flatiron'),
     path = require('path'),
     routes = require('./lib/plugins/routes'),
+    handlebarsPlugin = require('./lib/plugins/handlebars'),
     connect = require('connect'),
     app = flatiron.app;
 
@@ -23,6 +24,11 @@ app.use(flatiron.plugins.http, {
 
 });
 
+app.use(handlebarsPlugin, {
+          templates: __dirname + "/templates",
+          defaultLayout: 'layout',
+          blockHelpers: require('./lib/blockHelpers')
+        });
 app.use(routes);
 
 app.start(port,

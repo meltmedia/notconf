@@ -7,7 +7,8 @@
     "union": "0.1.7",
     "flatiron": "0.1.12-1",
     "connect": "1.8.5",
-    "director": "1.0.9-1"
+    "director": "1.0.9-1",
+    "handlebars": "1.0.5beta"
   },
   "devDependencies": {
     "api-easy": "0.3.2",
