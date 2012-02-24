@@ -35,7 +35,8 @@ app.use(flatiron.plugins.http, {
 app.use(handlebarsPlugin, {
           templates: __dirname + "/templates",
           defaultLayout: 'layout',
-          blockHelpers: require('./lib/blockHelpers')
+          blockHelpers: require('./lib/blockHelpers'),
+          cacheTemplates: true
         });
 app.use(routes);
 
