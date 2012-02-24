@@ -1,3 +1,10 @@
+/**
+ *
+ * Copyright(c) 2012 meltmedia <notconf@meltmedia.com>
+ * MIT LICENSE
+ *
+ */
+
 var flatiron = require('flatiron'),
     path = require('path'),
     routes = require('./lib/plugins/routes'),
