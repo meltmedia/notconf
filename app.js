@@ -5,7 +5,7 @@ var flatiron = require('flatiron'),
     connect = require('connect'),
     app = flatiron.app;
 
-var port = 3000;
+var port = 3050;
 
 app.config.file({ file: path.join(__dirname, 'config', 'config.json') });
 
