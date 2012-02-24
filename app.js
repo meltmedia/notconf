@@ -24,8 +24,8 @@ app.use(flatiron.plugins.http, {
 
   onError: function(err) {
     if(err) {
-      this.res.writeHead(404);
-      this.res.end("404");
+      this.res.writeHead(404, { "Content-Type": "text/html" });
+      this.res.end(app.render('404'));
     }
   }
 
