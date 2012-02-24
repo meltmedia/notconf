@@ -15,7 +15,8 @@ app.use(flatiron.plugins.http, {
    * Middleware
    */
   before: [
-    connect.static(__dirname + '/public')
+    connect.static(__dirname + '/public', {maxAge: 86400000}),
+    connect.staticCache()
   ],
 
   after: [
@@ -41,7 +42,7 @@ app.use(routes);
 app.start(port,
   function(err) {
     if(err) throw err;
-    app.log.info("NotConf Website Version 0.0.1");
+    app.log.info("NotConf Website Version 1.0.0");
     app.log.info("started at :", Date());
     app.log.info("   on port :", port);
     app.log.info("   in mode :", app.env);
