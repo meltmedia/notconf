@@ -414,7 +414,7 @@ iframe.twitter-share-button {
   max-width: 100%;
 }
 
-#sponsors  ul li a:hover img {
+#sponsors li a:hover img {
   opacity: .8;
 }
 
