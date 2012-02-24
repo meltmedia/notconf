@@ -58,6 +58,16 @@ and (max-width: 900px) {
 
 } /* end 900px wide */
 
+/* --- Max Screen 720px wide --- */
+/* ----------------------------- */
+
+@media only screen 
+and (max-width: 720px) {
+
+#tech-prop { text-align: center; }
+#tech-prop a { display: block; }
+
+} /* end 720px wide */
 
 /* --- Max Screen 700px wide --- */
 /* ----------------------------- */
@@ -104,8 +114,17 @@ nav ul li.twitter {
   top: 8px;
 }
 
+.callout .btn {
+  max-width: 200px;
+}
+
+#content {
+  padding-bottom: 0;
+}
+
 #content section {
   float: none;
+  min-height: 100px;
 }
 
 #about, #details, #schedule, #register {
@@ -114,7 +133,7 @@ nav ul li.twitter {
   width: 90%;
 }
 
-#sponsors {
+#sidebar {
   border-top: 1px solid #ccc;
   margin-top: 40px;
   padding: 20px 5%;
@@ -150,6 +169,28 @@ and (max-width: 660px) {
 #events tr td.time { padding-left: 10px; }
 
 } /* end 660px wide */
+
+
+/* --- Max Screen 580px wide --- */
+/* ----------------------------- */
+
+@media only screen 
+and (max-width: 580px) {
+
+#tech-prop {
+  float: none;
+  margin: -5px auto 0;
+  width: 85%;
+}
+#tech-prop a { display: inline-block; }
+footer p {
+  float: none;
+  margin: 10px 0;
+  padding: 0;
+  text-align: center;
+}
+
+} /* end 580px wide */
 
 /* --- Max Screen 500px wide --- */
 /* ----------------------------- */
@@ -201,7 +242,7 @@ and (max-width: 450px) {
 
 nav ul li.twitter {
   background: url(../images/icon-twitter2.png) no-repeat 0 40%;
-  top: 50px;
+  top: 60px;
 }
 
 nav ul li.twitter a {
@@ -209,8 +250,13 @@ nav ul li.twitter a {
   text-shadow: none;
 }
 
+iframe.twitter-share-button {
+  position: absolute;
+  top: 23px;
+}
+
 #content {
-  padding-top: 55px;
+  padding-top: 65px;
 }
 
 } /* end 450px wide */

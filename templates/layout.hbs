@@ -37,7 +37,7 @@
       <a href="/" title="NotConf" id="logo">NotConf</a>
       <div id="blurb">
         <p><span>a JSConf pre-conference</span><span class="lefties"> in the heart of</span> <span id="script">Phoenix</span></p>
-        <a href="/register" class="btn">Register to Attend</a>
+        <a href="/register" class="btn teal">Register to Attend</a>
       </div>
     </div>
   </header>
@@ -53,9 +53,14 @@
     <section id="{{sectionId}}">
       {{{ body }}}
     </section>
-    <section id="sponsors">
+    <section id="sidebar">
+      <div class="callout">
+        <h3>Show AZ your skillz!</h3>
+        <p>Give a talk or run a demo at NotConf.</p>
+        <a href="/register/speaker" title="Apply to speak/demo" class="btn teal">Apply to speak/demo</a>
+      </div>
       <h3>Our Generous Sponsors</h3>
-      <ul class="clearfix">
+      <ul id="sponsors" class="clearfix">
         <li id="meltmedia"><a href="http://meltmedia.com" target="_blank" title="meltmedia"><img src="/images/sponsor-meltmedia.png" alt="meltmedia" /></a></li>
         <li id="unicon"><a href="http://unicon.net" target="_blank" title="Unicon"><img src="/images/sponsor-unicon.png" alt="Unicon" /></a></li>
         <li id="jsconf"><a href="http://2012.jsconf.us/" target="_blank" title="JSConf 2012"><img src="/images/sponsor-jsconf.png" alt="JSConf 2012" /></a></li>
@@ -63,11 +68,14 @@
       </ul>
       <div class="callout">
         <h3>Want in on the fun?</h3>
-        <a href="/register/sponsor" title="Sponsor NotConf" class="btn">Sponsor NotConf</a>
+        <a href="/register/sponsor" title="Sponsor NotConf" class="btn grey">Sponsor NotConf</a>
       </div>
     </section>
   </div>
-  <footer>
+  <footer class="clearfix">
+    <div id="tech-prop">
+      <a href="https://github.com/meltmedia/notconf" target="_blank" title="Hosted on GitHub">Hosted on GitHub</a> &#38; <a href="http://flatironjs.org/" target="_blank" title="Running on Flatiron">Running on Flatiron</a>
+    </div>
     <p>&#169; Copyright 2012 NotConf. All rights reserved. Powered by <a href="http://meltmedia.com" target="_blank" title="meltmedia">meltmedia</a>.</p>
   </footer>
 

@@ -3,7 +3,7 @@ Fonts
 ------------------------*/
 
 body, p, h4, #events tr td span { font-family: Helvetica, Arial, sans-serif; }
-h1, h2, h3, nav, #blurb p, #events { font-family: "futura-pt", Verdana, sans-serif; }
+h1, h2, h3, nav, #blurb p, #events, #tech-prop { font-family: "futura-pt", Verdana, sans-serif; }
 #script { font-family: "reklame-script", "futura-pt", Verdana, sans-serif; }
 
 /*------------------------
@@ -87,11 +87,49 @@ p a:hover { text-decoration: underline; }
   text-shadow: 0 1px 2px rgba(0,0,0,.4);
 }
 
+.btn.teal {
+  background-color: #0b879f;
+  background-image: url(../images/bg-btn-teal.gif);
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #1fb6c4, #0b879f);
+  background-image: -webkit-linear-gradient(top, #1fb6c4, #0b879f);
+  border: 1px solid #0b7d8d;
+}
+
+.btn.teal:hover {
+  background-image: -moz-linear-gradient(top, #19a4b1, #05758b);
+  background-image: -webkit-linear-gradient(top, #19a4b1, #05758b);
+}
+
+.btn.grey {
+  background-color: #8c9bab;
+  background-image: url(../images/bg-btn-grey.gif);
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #b9c1cb, #8c9bab);
+  background-image: -webkit-linear-gradient(top, #b9c1cb, #8c9bab);
+  border: 1px solid #6e8295;
+}
+
+.btn.grey:hover {
+  background-image: -moz-linear-gradient(top, #a0a9b4, #748495);
+  background-image: -webkit-linear-gradient(top, #a0a9b4, #748495);
+}
+
 .callout {
   background: #f2f2f2;
   border: 1px solid #eaeaea;
   border-radius: 3px;
-  padding: 20px;
+  clear: both;
+  margin-bottom: 30px;
+  padding: 15px 20px;
+}
+
+.callout h3 {
+  margin-bottom: 5px;
+}
+
+.callout .btn {
+  margin: 15px auto 0;
 }
 
 /*------------------------
@@ -164,19 +202,8 @@ header:after {
 }
 
 header .btn {
-  background-color: #0b879f;
-  background-image: url(../images/bg-btn-teal.gif);
-  background-repeat: repeat-x;
-  background-image: -moz-linear-gradient(top, #1fb6c4, #0b879f);
-  background-image: -webkit-linear-gradient(top, #1fb6c4, #0b879f);
-  border: 1px solid #0b7d8d;
   margin: 35px auto;
   width: 130px;
-}
-
-header .btn:hover {
-  background-image: -moz-linear-gradient(top, #19a4b1, #05758b);
-  background-image: -webkit-linear-gradient(top, #19a4b1, #05758b);
 }
 
 /*------------------------
@@ -266,22 +293,6 @@ Main Content
   max-width: 940px;
 }
 
-#content .btn {
-  background-color: #8c9bab;
-  background-image: url(../images/bg-btn-grey.gif);
-  background-repeat: repeat-x;
-  background-image: -moz-linear-gradient(top, #b9c1cb, #8c9bab);
-  background-image: -webkit-linear-gradient(top, #b9c1cb, #8c9bab);
-  border: 1px solid #6e8295;
-  margin: 0 auto;
-  width: auto;
-}
-
-#content .btn:hover {
-  background-image: -moz-linear-gradient(top, #a0a9b4, #748495);
-  background-image: -webkit-linear-gradient(top, #a0a9b4, #748495);
-}
-
 #content img.photo {
   box-shadow: 0 0 0 5px #e9f9fb, 0 0 0 6px #b3c2d2, 2px 2px 3px 5px rgba(0,0,0,.2);
   margin: 10px 0;
@@ -290,6 +301,7 @@ Main Content
 
 #content section {
   float: left;
+  min-height: 810px;
 }
 
 #about, #details, #schedule, #register {
@@ -378,17 +390,17 @@ Main Content
   text-transform: none;
 }
 
-#register {
-  min-height: 620px;
-}
-
-#sponsors {
+#sidebar {
   text-align: center;
   padding: 0 1.59574468%;
   width: 20.93617021%;
 }
 
-#sponsors ul {
+iframe.twitter-share-button {
+  margin: 0 0 15px 0;
+}
+
+#sponsors {
   list-style-type: none;
   margin: 0 0 40px;
   padding: 0;
@@ -402,12 +414,8 @@ Main Content
   max-width: 100%;
 }
 
-#sponsors ul li a:hover img {
+#sponsors  ul li a:hover img {
   opacity: .8;
-}
-
-#wufooFormz7x0w7 h2 {
-  color: red;
 }
 
 /*------------------------
@@ -415,12 +423,34 @@ Footer
 ------------------------*/
 
 footer {
-  margin: 10px auto 20px;
+  margin: 0 auto 20px;
   max-width: 960px;
 }
 
+#tech-prop {
+  background: #75c5d2 url(../images/bg-blue-texture.jpg) repeat 0 0;
+  border: 1px solid rgba(255,255,255,.4);
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,.3);
+  color: #fff;
+  float: left;
+  margin: -5px 15px 0 30px;
+  padding: 12px 10px 7px;
+}
+
+#tech-prop a {
+  color: #344456;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 3px;
+  text-shadow: 1px 1px 0 rgba(255,255,255,.5);
+  text-transform: uppercase;
+}
+
 footer p {
+  float: right;
   font-size: 11px;
+  margin-top: 10px;
   text-align: right;
   text-shadow: 1px 1px 0 rgba(255,255,255,.4);
 }
