@@ -143,7 +143,7 @@ nav ul li.twitter {
 #sponsors li {
   float: left;
   margin-right: 4%;
-  width: 22%;
+  width: 29%;
 }
 
 #sponsors li:last-child {
@@ -152,7 +152,7 @@ nav ul li.twitter {
 
 #sponsors img { max-height: 75px; }
 
-#sponsors #unicon img {
+#sponsors #unicon img, #sponsors #nodeaz img {
   margin-top: 30px;
   max-height: 17px;
 }
@@ -283,7 +283,7 @@ and (max-width: 430px) {
 
 #sponsors img { max-height: 100%; }
 
-#sponsors #unicon img {
+#sponsors #unicon img, #sponsors #nodeaz img {
   margin-top: 0;
   max-height: 100%;
 }
