@@ -3,7 +3,7 @@
 
   <head>
 
-    <meta name="viewport" content="initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta charset="utf-8" />
 
@@ -27,7 +27,7 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
-
+    
   </head>
 
   <body>
@@ -41,7 +41,7 @@
       </div>
     </div>
   </header>
-  <nav>
+  <nav id="navigation">
     <ul>
       <li><a href="/details" title="Details" class="{{details}}">Details</a></li>
       <li><a href="/schedule" title="Schedule" class="{{schedule}}">Schedule</a></li>
@@ -50,7 +50,7 @@
     </ul>
   </nav>
   <div id="content" class="clearfix">
-    <section id="{{sectionId}}">
+    <section id="{{sectionId}}" class="section-content">
       {{{ body }}}
     </section>
     <section id="sidebar">
@@ -81,5 +81,11 @@
   </footer>
 
   </body>
-
+  
+  <script type="text/javascript">var host = (("https:" == document.location.protocol) ? "https://secure." : "http://");document.write(unescape("%3Cscript src='" + host + "wufoo.com/scripts/embed/form.js' type='text/javascript'%3E%3C/script%3E"));</script>
+  <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="/js/history.js"></script>
+  <script type="text/javascript" src="/js/history.adapter.jquery.js"></script>
+  <script type="text/javascript" src="/js/history-app.js"></script>
+  
 </html>
