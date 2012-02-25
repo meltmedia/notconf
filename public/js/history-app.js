@@ -35,7 +35,8 @@ var Site = {};
   };
 
   $(function() {
-    var $contentArea = $('#content .section-content'),
+    var $contentHolder = $('#content .section-content'),
+        $contentArea = $('#content .section-content .swap-content'),
         $initForm = $contentArea.find('.wufoo-form-holder'),
         rootUrl = History.getRootUrl(),
         $body = $('body'),
@@ -105,14 +106,20 @@ var Site = {};
           successFn = function(data) {
             var $data = $(data),
                 $content = $data.filter('section.section-content').ajaxify(),
-                title = "NotConf - " + $content.data('title');
-
+                title = "NotConf - " + $content.data('title'),
+                id = $content.attr('id');
+                
+            $contentHolder.attr('id', id);
+            
+            // Reset active nav states
+            $scrollTo.find('a').removeClass('active').filter('[href^="/'+relativeUrl.split('/')[1]+'"]').addClass('active');
             // Append any wufoo scripts back into their rightful parent
             addForm($content, url);
 
             $contentArea.fadeOut(400, function() {
-              $(this).replaceWith($content).fadeIn(400);
-              $contentArea = $content;
+              var $swapContent = $content.find('.swap-content');
+              $(this).replaceWith($swapContent).fadeIn(400);
+              $contentArea = $swapContent;
             });
 
             $title.text(title);
