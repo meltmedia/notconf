@@ -31,7 +31,7 @@ var Site = {};
   };
 
   document.write = function() {
-    Site.currentFormHolder.append($(arguments[0]));
+    Site.currentFormHolder.empty().append($(arguments[0]));
   };
 
   $(function() {
@@ -106,20 +106,17 @@ var Site = {};
           successFn = function(data) {
             var $data = $(data),
                 $content = $data.filter('section.section-content').ajaxify(),
+                $swapContent = $content.find('.swap-content'),
                 title = "NotConf - " + $content.data('title'),
                 id = $content.attr('id');
                 
-            $contentHolder.attr('id', id);
+            addForm($swapContent, url);
             
-            // Reset active nav states
-            $scrollTo.find('a').removeClass('active').filter('[href^="/'+relativeUrl.split('/')[1]+'"]').addClass('active');
-            // Append any wufoo scripts back into their rightful parent
-            addForm($content, url);
-
             $contentArea.fadeOut(400, function() {
-              var $swapContent = $content.find('.swap-content');
-              $(this).replaceWith($swapContent).fadeIn(400);
-              $contentArea = $swapContent;
+              $contentHolder.attr('id', id);
+              // Reset active nav states
+              $scrollTo.find('a').removeClass('active').filter('[href="/'+relativeUrl.split('/')[1]+'"]').addClass('active');
+              $contentArea.html($swapContent.html()).fadeIn(400);
             });
 
             $title.text(title);
