@@ -105,7 +105,7 @@ var Site = {};
           relativeUrl = '/' + url.replace(rootUrl, ''),
           successFn = function(data) {
             var $data = $(data),
-                $content = $data.filter('section.section-content').ajaxify(),
+                $content = $data.filter('section.section-content'),
                 $swapContent = $content.find('.swap-content'),
                 title = "NotConf - " + $content.data('title'),
                 id = $content.attr('id');
@@ -116,7 +116,7 @@ var Site = {};
               $contentHolder.attr('id', id);
               // Reset active nav states
               $scrollTo.find('a').removeClass('active').filter('[href="/'+relativeUrl.split('/')[1]+'"]').addClass('active');
-              $contentArea.html($swapContent.html()).fadeIn(400);
+              $contentArea.html($swapContent.html()).ajaxify().fadeIn(400);
             });
 
             $title.text(title);
