@@ -50,7 +50,7 @@ app.use(routes);
 app.start(port,
   function(err) {
     if(err) throw err;
-    app.log.info("NotConf Website Version 1.0.0");
+    app.log.info("NotConf Website Version 1.1.0");
     app.log.info("started at :", Date());
     app.log.info("   on port :", port);
     app.log.info("   in mode :", app.env);
