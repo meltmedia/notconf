@@ -63,15 +63,22 @@ p, address {
   margin: 0 10px 15px 0;
 }
 
-p.footnote {
+.footnote {
   color: #a6a6a6;
+  display: block;
   font-size: 11px;
   font-style: italic;
   margin: -15px 0 15px;
 }
 
-p a { color: #2796aa; }
+span.footnote {
+  margin: -5px 0 15px;
+}
+
+p a, td a { color: #2796aa; }
 p a:hover { text-decoration: underline; }
+
+em { font-style: italic; }
 
 .lefties { text-align: left; }
 .righties { text-align: right; }
@@ -130,6 +137,15 @@ p a:hover { text-decoration: underline; }
 
 .callout .btn {
   margin: 15px auto 0;
+}
+
+.magazine-layout p {
+  float: left;
+}
+
+.magazine-layout p.photo {
+  margin-right: 3%;
+  width: 40%;
 }
 
 /*------------------------
@@ -382,11 +398,11 @@ Main Content
   text-align: center;
 }
 
-#events tr td.speaker span {
+#events tr td.speaker span, #events tr td.activities span {
   color: #7f7f7f;
   display: block;
   font-size: 13px;
-  margin-top: 3px;
+  margin: 3px 0 5px;
   text-transform: none;
 }
 
