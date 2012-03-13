@@ -393,9 +393,14 @@ Main Content
   text-transform: uppercase;
 }
 
+#events tr td.speaker {
+  max-width: 240px;
+}
+
 #events tr td.activities {
   padding: 15px 40px;
   text-align: center;
+  max-width: 130px;
 }
 
 #events tr td.speaker span, #events tr td.activities span {
