@@ -3,9 +3,15 @@ title: Register to speak or give a demo
 sectionId: register
 register: active
 ---
+{{#if showReg}}
 <h1>Apply to speak or give a demo</h1>
 <p>Think you've got an idea others will want to hear? Apply to become a speaker or give a demo at NotConf. We won't share your information with anyone, promise.</p>
 <p><strong>Applications for speakers and demos will close on March 18th at midnight.</strong></p>
 <p>Not quite ready? <a href="/register" title="Register to attend">Register to attend.</a> Want to help out in other ways? <a href="/register/volunteer" title="Volunteer now.">Volunteer now.</a></p>
 <div class="wufoo-form-holder"><img src="/images/form-loader.gif" alt="Loading" /></div>
+{{else}}
+
+<h1>Speaker Registration Closed</h1>
+
+{{/if}}
 
