@@ -10,11 +10,13 @@ var flatiron = require('flatiron'),
     routes = require('./lib/plugins/routes'),
     handlebarsPlugin = require('./lib/plugins/handlebars'),
     connect = require('connect'),
+    expressUglify = require('express-uglify'),
+    pkg = require('./package.json'),
     app = flatiron.app;
 
-var port = 3050;
-
 app.config.file({ file: path.join(__dirname, 'config', 'config.json') });
+
+var port = app.config.get('port');
 
 app.use(flatiron.plugins.http, {
 
@@ -22,6 +24,11 @@ app.use(flatiron.plugins.http, {
    * Middleware
    */
   before: [
+    expressUglify.middleware({
+      src: __dirname + '/public',
+      logLevel: 'info',
+      loggerL: app.log
+    }),
     connect.static(__dirname + '/public', {maxAge: 86400000}),
     connect.staticCache()
   ],
@@ -50,7 +57,8 @@ app.use(routes);
 app.start(port,
   function(err) {
     if(err) throw err;
-    app.log.info("NotConf Website Version 1.1.0");
+    app.log.info("      name :", pkg.name);
+    app.log.info("   version :", pkg.version);
     app.log.info("started at :", Date());
     app.log.info("   on port :", port);
     app.log.info("   in mode :", app.env);
