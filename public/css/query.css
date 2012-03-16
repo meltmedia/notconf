@@ -56,7 +56,27 @@ and (max-width: 900px) {
   width: 180px;
 }
 
+#events tr td.activities {
+  padding: 20px;
+}
+
+#events tr td.time {
+  padding-left: 5px;
+}
+
 } /* end 900px wide */
+
+/* --- Max Screen 768px wide --- */
+/* ----------------------------- */
+
+@media only screen 
+and (max-width: 768px) {
+
+#events tr td.time {
+  padding-left: 0;
+}
+
+} /* end 768px wide */
 
 /* --- Max Screen 720px wide --- */
 /* ----------------------------- */
@@ -166,7 +186,6 @@ nav ul li.twitter {
 and (max-width: 660px) {
 
 #events tr td { padding: 15px 15px 15px 0; }
-#events tr td.time { padding-left: 10px; }
 
 } /* end 660px wide */
 
