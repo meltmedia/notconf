@@ -317,7 +317,7 @@ Main Content
 
 #content section {
   float: left;
-  min-height: 840px;
+  min-height: 720px;
 }
 
 #about, #details, #schedule, #register {
