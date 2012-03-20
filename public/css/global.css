@@ -403,6 +403,11 @@ Main Content
   max-width: 130px;
 }
 
+#events tr td.activities h3 {
+  font-size: 16px;
+  margin: 7px 0 2px;
+}
+
 #events tr td.speaker span, #events tr td.activities span {
   color: #7f7f7f;
   display: block;
