@@ -24,11 +24,13 @@ app.use(flatiron.plugins.http, {
    * Middleware
    */
   before: [
+/*
     expressUglify.middleware({
       src: __dirname + '/public',
       logLevel: 'info',
       loggerL: app.log
     }),
+*/
     connect.static(__dirname + '/public', {maxAge: 86400000}),
     connect.staticCache()
   ],
