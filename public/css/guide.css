@@ -1,0 +1,314 @@
+header:after {
+  background: #465b72;
+  border-bottom: 2px solid #77c9d7;
+  bottom: -15px;
+  box-shadow: 0 2px 3px rgba(0,0,0,.3);
+  content: '';
+  height: 13px;
+  position: absolute;
+  width: 100%;
+}
+
+#header-content {
+  background: none;
+  max-width: 700px;
+  min-height: 10px;
+  padding: 15px 0;
+}
+
+#logo {
+  background-size: 150px auto;
+  height:90px;
+  margin-left: 15px;
+  width: 150px;
+}
+
+#blurb {
+  float: right;
+  margin: 0 15px 0 0;
+  width: 160px;
+}
+
+#blurb p {
+  color: #344456;
+  font-size: 20px;
+  line-height: 25px;
+  padding-right: 20px;
+}
+
+#blurb p #script {
+  font-size: 40px;
+  right: 0;
+  top: 32px;
+}
+
+header .btn {
+  float: right;
+  margin: 50px 0 0;
+  padding: 4px;
+  width: 100px;
+}
+
+section {
+  margin: 45px auto;
+  max-width: 670px;
+  padding: 0 15px 15px;
+}
+
+iframe.twitter-share-button {
+  margin: 0;
+}
+
+h2 {
+  color: #808889;
+  font-size: 23px;
+  text-shadow: 1px 1px 0 rgba(255,255,255,.6);
+  margin: 50px 0 10px;
+}
+
+h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+h3.schedule {
+  font-size: 15px;
+}
+
+p {
+  color: #5d6667;
+  font-size: 15px;
+  line-height: 22px;
+  margin: 10px 0;
+}
+
+p.footnote {
+  color: #5d6667;
+  line-height: 15px;
+  margin-top: 20px;
+}
+
+p a {
+  text-shadow: 1px 1px 0 rgba(255,255,255,.4);
+}
+
+ol {
+  counter-reset: li;
+  list-style: none;
+  font-size: 15px;
+  margin: 15px;
+}
+
+ol li:before{
+  background: rgba(0,0,0,.1);
+  border-radius: 40px;
+  box-shadow: 1px 1px 0 rgba(255,255,255,.5), inset 1px 1px 0 rgba(0,0,0,.2);
+  color: #fff;
+  content: counter(li);
+  counter-increment: li;
+  font-weight: bold;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+  width: 30px;
+}
+
+ol li {
+  color: #5d6667;
+  margin: 0 0 10px;
+}
+
+.btn-list {
+  list-style-type: none;
+  margin: 15px 0;
+}
+
+.btn-list li {
+  display: block;
+  float: left;
+  margin-right: 2%;
+  width: 32%;
+}
+
+.btn-list li:last-child {
+  margin-right: 0;
+}
+
+section .btn {
+  padding: 7px 10px 6px;
+  max-width: 100%;
+}
+
+section div img {
+  box-shadow: 2px 2px 3px rgba(0,0,0,.3);
+}
+
+#badge {
+  border: 3px solid rgba(255,255,255,.3);
+  float: right;
+  margin: 25px 25px 0 15px;
+  -moz-transform:rotate(5deg);
+  -webkit-transform:rotate(5deg);
+  max-width: 35%;
+}
+
+#tix {
+  float: left;
+  margin: 40px 0 25px;
+  min-height: 50px;
+  width: 40%;
+  position: relative;
+}
+
+#refresh {
+  float: left;
+  margin-top: 40px;
+  width: 60%;
+}
+
+#refresh h2 {
+  margin-top: 0;
+}
+
+#tix img {
+  border: 3px solid rgba(255,255,255,.3);
+  position: absolute;
+}
+
+#tix img:first-child {
+  left: 10%;
+  top: 10px;
+  -moz-transform:rotate(-15deg);
+  -webkit-transform:rotate(-15deg);
+}
+
+#tix img:nth-child(2) {
+  right: 40%;
+  top: 5px;
+  -moz-transform:rotate(-5deg);
+  -webkit-transform:rotate(-5deg);
+}
+
+#tix img:last-child {
+  right: 15%;
+  top: 15px;
+  -moz-transform:rotate(7deg);
+  -webkit-transform:rotate(7deg);
+}
+
+#events div {
+  float: left;
+  width: 50%;
+}
+
+dl dt, dl dd {
+  display: inline-block;
+  font-size: 17px;
+}
+
+dl dt {
+  margin-right: 2%;
+  text-align: left;
+  width: 45%;
+}
+
+dl dd {
+  margin-right: 3%;
+  width: 50%;
+}
+
+#cowboy {
+  box-shadow: none;
+  float: right;
+  margin: 20px 0 10px 20px;
+}
+
+#speakers, #demos {
+  float: left;
+  margin-top: 15px;
+}
+
+#speakers { width: 45%; }
+#demos {
+  margin-left: 5%;
+  width: 50%;
+}
+
+@media only screen 
+and (max-width: 480px) {
+
+  #speakers p, #demos p {
+    font-size: 13px;
+  }
+
+}
+
+@media only screen 
+and (max-width: 360px) {
+
+#logo {
+  background-size: 100px auto;
+  height:90px;
+  margin-left: 15px;
+  width: 100px;
+}
+
+.btn-list li {
+  float: none;
+  margin-bottom: 15px;
+  margin-right: 0;
+  width: 100%;
+}
+
+#badge {
+  display: block;
+  float: none;
+  margin: 15px auto 20px;
+  -moz-transform:rotate(2deg);
+  -webkit-transform:rotate(2deg);
+  max-width: 150px;
+}
+
+#speakers, #demos {
+  float: none;
+  margin: 0;
+  width: 100%;
+}
+
+  #speakers p, #demos p {
+    font-size: 14px;
+  }
+
+  #tix, #refresh {
+    float: none;
+    width: 100%;
+  }
+
+#tix {
+  min-height: 170px;
+}
+
+#tix img {
+  width: 53px;
+}
+
+#tix img:first-child {
+  left: 20%;
+}
+
+#tix img:nth-child(2) {
+  right: 40%;
+}
+
+#tix img:last-child {
+  right: 20%;
+}
+
+#cowboy {
+  width: 100px;
+}
+
+}
