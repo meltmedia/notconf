@@ -1,9 +1,51 @@
 var Site = {};
+
+function parseUri (str) {
+  var  o   = parseUri.options,
+    m   = o.parser[o.strictMode ? "strict" : "loose"].exec(str),
+    uri = {},
+    i   = 14;
+
+  while (i--) uri[o.key[i]] = m[i] || "";
+
+  uri[o.q.name] = {};
+  uri[o.key[12]].replace(o.q.parser, function ($0, $1, $2) {
+    if ($1) uri[o.q.name][$1] = $2;
+  });
+
+  return uri;
+}
+
+parseUri.options = {
+  strictMode: false,
+  key: ["source","protocol","authority","userInfo","user","password","host","port","relative","path","directory","file","query","anchor"],
+  q:   {
+    name:   "queryKey",
+    parser: /(?:^|&)([^&=]*)=?([^&]*)/g
+  },
+  parser: {
+    strict: /^(?:([^:\/?#]+):)?(?:\/\/((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?))?((((?:[^?#\/]*\/)*)([^?#]*))(?:\?([^#]*))?(?:#(.*))?)/,
+    loose:  /^(?:(?![^:@]+:[^:@\/]*@)([^:\/?#.]+):)?(?:\/\/)?((?:(([^:@]*)(?::([^:@]*))?)?@)?([^:\/?#]*)(?::(\d*))?)(((\/(?:[^?#](?![^?#\/]*\.[^?#\/.]+(?:[?#]|$)))*\/?)?([^?#\/]*))(?:\?([^#]*))?(?:#(.*))?)/
+  }
+};
+
 (function($) {
 
-  var hasHistory = function() {
-        return !!(window.history && history.pushState);
+  var blackList = [
+        '/guide'
+      ],
+      checkUrl = function(url) {
+        for (var i = 0, m = blackList.length; i < m; i++) {
+          if (blackList[i] === parseUri(url).path) {
+            return false;
+          }
+        }
+        return true;
+      },
+      hasHistory = function() {
+        return checkUrl(location.href) && !!(window.history && history.pushState);
       };
+      
   
   Site.Wufoo = {
     'base': {
@@ -67,7 +109,11 @@ var Site = {};
           url = $link.attr('href') || '';
           
       // It is internal if it begins with the root url or if it has no :, also ignore named anchors
-      return ((url.substring(0, rootUrl.length) === rootUrl || url.indexOf(':') === -1) && url.charAt(0) !== "#");
+      return (
+        (url.substring(0, rootUrl.length) === rootUrl || url.indexOf(':') === -1) &&
+        url.charAt(0) !== "#" &&
+        checkUrl(url)
+      );
     };
 
     // Ajaxify Helper
