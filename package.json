@@ -1,7 +1,7 @@
 {
   "name": "notconf",
   "description": "NotConf Website",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "private": false,
   "dependencies": {
     "union": "0.1.7",
