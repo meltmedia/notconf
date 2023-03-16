@@ -1,6 +1,6 @@
 # NotConf Website
 
-Hey there fellow developer. Clearly you are here because you code. How do you feel about talking on your code? We are looking for speakers to present at NotConf and we'd love to have you! [Submit to speak now!](http://notconf.com/register/speaker)
+Hey there fellow developer. Clearly you are here because you code. How do you feel about talking on your code? We are looking for speakers to present at NotConf and we'd love to have you!
 
 ## About NotConf
 NotConf is an all day, come-and-go pre-conference event for those attending JSConf and for people in the community interested in Javascript. The day before a big conference can be full of excitement as everyone revs up to hear some great speakers. If you arrive in Phoenix on Sunday, April 1st, join us at the Arizona Historical Society at Papago Park.
